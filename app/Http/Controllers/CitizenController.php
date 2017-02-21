@@ -33,7 +33,7 @@ class CitizenController extends Controller
      */
     public function create()
     {
-        return view('pages.citizen.create');
+        // return view('pages.citizen.create');
     }
 
     /**
@@ -44,7 +44,15 @@ class CitizenController extends Controller
      */
     public function store(Request $request)
     {
-
+        $citizen = new citizen($request->all());
+        if ($request->file('avatar')) {
+            $file = $request->file('avatar');
+            $fileName = sha1(time() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
+            $request->file('avatar')->move('images/citizens', $fileName);
+            $citizen->avatar = $fileName;
+        }
+        $citizen->save();
+        return redirect('citizens');
     }
 
     /**
