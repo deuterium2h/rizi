@@ -37,32 +37,32 @@
 				</button>
 			</form>
 		</li> --}}
-		<li class="active opened active">
+		<li class="{{ Request::is('home') ? 'active' : '' }}">
 			<a href="/home">
 				<i class="entypo-home"></i>
 				<span>Home</span>
 			</a>
 		</li>
-		<li>
+		<li class="{{ Request::is('citizen')||Request::is('permit')||Request::is('clearance') ? 'active opened active' : '' }}">
 			<a href="citizen">
 				<i class="entypo-docs"></i>
 				<span>Barangay Documents</span>
 				<span class="badge badge-secondary">8</span>
 			</a>
 			<ul>
-				<li>
+				<li class="{{ Request::is('citizen') ? 'active' : '' }}">
 					<a href="/citizen">
 						<i class="entypo-users"></i>
 						<span>Citizens (Barangay ID)</span>
 					</a>
 				</li>
-				<li>
+				<li class="{{ Request::is('permit') ? 'active' : '' }}">
 					<a href="/permit">
 						<i class="entypo-newspaper"></i>
 						<span>Barangay Business Permit</span>
 					</a>
 				</li>
-				<li>
+				<li class="{{ Request::is('clearance') ? 'active' : '' }}">
 					<a href="/clearance">
 						<i class="entypo-doc-text"></i>
 						<span>Barangay Clearance</span>
@@ -70,8 +70,8 @@
 				</li>
 			</ul>
 		</li>
-		<li>
-			<a href="index.html">
+		<li class="{{ Request::is('news') ? 'active' : '' }}">
+			<a href="/news">
 				<i class="entypo-clipboard"></i>
 				<span>Barangay News</span>
 			</a>

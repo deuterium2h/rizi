@@ -20,6 +20,7 @@ Route::get('/home', 'HomeController@index');
 Route::resource('clearance', 'ClearanceController');
 Route::resource('citizen', 'CitizenController');
 Route::resource('permit', 'PermitController');
+Route::resource('news', 'NewsController');
 
 Route::get('apply-for-citizenship', 'ApplicantController@apply_for_citizen');
 Route::get('applicant/citizen', 'ApplicantController@citizen');

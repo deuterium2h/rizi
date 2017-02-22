@@ -12,12 +12,16 @@ class Citizen extends Model
         'middle_name',
         'address',
         'birthday',
+        'tin',
+        'sss',
+        'height',
+        'weight',
+        'bloodtype',
         'gender',
         'contact_num',
         'civil_status',
         'guardian_name',
         'guardian_address',
-        'guardian_tel_num',
-        'guardian_cell_num'
+        'guardian_contact_num'
     ];
 }
