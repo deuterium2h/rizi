@@ -6,6 +6,8 @@ use Illuminate\Http\Request;
 
 use App\News;
 
+use App\NewsPhoto;
+
 class NewsController extends Controller
 {
     /**
@@ -36,7 +38,16 @@ class NewsController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        News::create($request->all());
+
+        return redirect('news');
+    }
+
+    public function add_photo($id, Request $request)
+    {
+        $photo = NewsPhoto::fromFile($request->file('photo'));
+
+        Vehicle::plateNumber($id)->addPhoto($photo);
     }
 
     /**
@@ -58,7 +69,9 @@ class NewsController extends Controller
      */
     public function edit($id)
     {
-        //
+        $news = News::id($id);
+
+        return view('pages.news.edit', compact('news'))
     }
 
     /**
@@ -70,7 +83,10 @@ class NewsController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $news = News::findOrFail($id);
+        $news->update($request->all());
+
+        return redirect('news');
     }
 
     /**
@@ -81,6 +97,15 @@ class NewsController extends Controller
      */
     public function destroy($id)
     {
-        //
+        News::findOrFail($id)->delete();
+
+        return redirct('news');
+    }
+
+    public function destroy_photo($id)
+    {
+        NewsPhoto::findOrFail($id)->delete();
+
+        return back();
     }
 }
