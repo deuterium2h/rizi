@@ -25,6 +25,7 @@ elixir(mix => {
     	'libs/resizeable.js',
     	'libs/neon-api.js',
         'libs/jquery.inputmask.bundle.min.js',
+        'libs/dropzone/dropzone.js',
     	// 'libs/jcrop/jquery.Jcrop.min.js',
     	'libs/neon-custom.js'
 	], './public/js/libs.js')
@@ -34,7 +35,8 @@ elixir(mix => {
 		'libs/bootstrap.css',
 		'libs/neon-core.css',
         'libs/neon-forms.css',
-		'libs/neon-theme.css'
+		'libs/neon-theme.css',
+        'libs/dropzone.css'
 	], './public/css/libs.css')
     //     .styles([
     //     'libs/bootstrap.css',

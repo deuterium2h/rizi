@@ -27,7 +27,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.news.create');
     }
 
     /**
@@ -58,7 +58,9 @@ class NewsController extends Controller
      */
     public function show($id)
     {
-        //
+        $news = News::id($id);
+
+        return view('pages.news.show', compact('news'));
     }
 
     /**
@@ -71,7 +73,7 @@ class NewsController extends Controller
     {
         $news = News::id($id);
 
-        return view('pages.news.edit', compact('news'))
+        return view('pages.news.edit', compact('news'));
     }
 
     /**
@@ -84,6 +86,7 @@ class NewsController extends Controller
     public function update(Request $request, $id)
     {
         $news = News::findOrFail($id);
+
         $news->update($request->all());
 
         return redirect('news');
