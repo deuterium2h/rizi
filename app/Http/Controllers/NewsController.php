@@ -15,9 +15,11 @@ class NewsController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        return view('pages.news.index');
+        $articles = News::latest('updated_at')->get();
+        
+        return view('pages.news.index', compact('articles'));
     }
 
     /**

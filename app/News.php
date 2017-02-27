@@ -9,7 +9,7 @@ class News extends Model
     protected $fillable = [
     	'title',
     	'body',
-    	'published_by'
+    	'posted_by'
     ];
 
     public static function id($id)

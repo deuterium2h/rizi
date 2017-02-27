@@ -16,7 +16,7 @@ class CreateNewsPhotosTable extends Migration
         Schema::create('news_photos', function (Blueprint $table) {
             $table->increments('id');
             $table->integer('news_id')->unsigned()->index();
-            $table->foreign('news_id')->references('id')->on('newes')->onDelete('cascade');
+            $table->foreign('news_id')->references('id')->on('news')->onDelete('cascade');
             $table->string('name');
             $table->string('path');
             $table->string('thumbnail_path');

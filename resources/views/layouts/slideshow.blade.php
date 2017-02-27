@@ -17,7 +17,7 @@
 						</div>
 						<div class="slide-image">	
 							<a href="#">
-								<img src="images/01.png" class="img-responsive" />
+								<img src="images/01.png" class="img-responsive" width="50%" />
 							</a>
 						</div>
 					</div>					
@@ -51,7 +51,7 @@
 						</div>
 						<div class="slide-image">
 							<a href="#">
-								<img src="images/03.png" class="img-responsive" />
+								<img src="images/03.png" class="img-responsive" width="40%" />
 							</a>
 						</div>
 					</div>

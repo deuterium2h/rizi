@@ -15,6 +15,9 @@ class CreatePermitsTable extends Migration
     {
         Schema::create('permits', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('business_name');
+            $table->text('business_address');
+            $table->string('business_owner');
             $table->timestamps();
         });
     }

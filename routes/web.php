@@ -13,7 +13,7 @@
 
 Route::get('/', 'PagesController@welcome');
 Route::get('/about-us', 'PagesController@about_us');
-Route::get('/news', 'PagesController@news');
+Route::get('/local-news', 'PagesController@news');
 Auth::routes();
 
 Route::get('/home', 'HomeController@index');

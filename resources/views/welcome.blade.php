@@ -12,7 +12,10 @@
 		<!-- News/Articles -->
 		@include('layouts.news-articles')
 		<!-- Testimonails -->
-		@include('layouts.statistics')
+		<div class="container">
+			<hr>
+		</div>
+		{{-- @include('layouts.statistics') --}}
 		<!-- Barangay Officials -->
 		@include('layouts.brgy-officials')
 		<!-- Footer Widgets -->

@@ -26,7 +26,7 @@
 									</a>
 								</li>
 								<li>
-									<a href="/news">
+									<a href="/local-news">
 										<span>News</span>
 									</a>
 								</li>
