@@ -1,24 +1,42 @@
-@extends('layouts.front-end-template')
+@extends('layouts.pages.lgu')
+
 @section('title')
 	Brgy. San Isidro
 @endsection
+
+@section('custom-css')
+	<style>
+		h2.slider{
+			color:white;
+		}
+		.img-size {
+			width: 263px;
+			height: 185px;
+			max-height: 185px;
+		}
+	</style>
+@endsection
+
 @section('content')
 	<div class="wrap">
-		@include('layouts.front-end-header')
+		@include('layouts.partials._front-end-header')
 		<!-- Main Slider -->
-		@include('layouts.slideshow')
+		@include('layouts.partials._slideshow')
 		<!-- Features Blocks -->
-		@include('layouts.list-of-registered')
+		@include('layouts.partials._list-of-registered')
 		<!-- News/Articles -->
-		@include('layouts.news-articles')
+		@include('layouts.partials._news-articles')
 		<!-- Testimonails -->
 		<div class="container">
 			<hr>
 		</div>
-		{{-- @include('layouts.statistics') --}}
+		{{-- @include('layouts.partials._statistics') --}}
 		<!-- Barangay Officials -->
-		@include('layouts.brgy-officials')
+		<center>
+			<h1>Barangay Officials</h1>
+		</center>
+		@include('layouts.partials._brgy-officials')
 		<!-- Footer Widgets -->
-		@include('layouts.front-end-footer')
+		@include('layouts.partials._front-end-footer')
 	</div>
 @endsection

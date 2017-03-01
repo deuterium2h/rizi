@@ -8,18 +8,30 @@ use App\News;
 
 use App\NewsPhoto;
 
+use Illuminate\Database\Eloquent\Builder;
+
+use App\Http\Requests\NewsRequest;
+
+use App\Http\Controllers\Controller;
+
 class NewsController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+
     /**
      * Display a listing of the resource.
      *
      * @return \Illuminate\Http\Response
      */
+    
     public function index(Request $request)
     {
         $articles = News::latest('updated_at')->get();
         
-        return view('pages.news.index', compact('articles'));
+        return view('pages.admin.news.index', compact('articles'));
     }
 
     /**
@@ -29,7 +41,7 @@ class NewsController extends Controller
      */
     public function create()
     {
-        return view('pages.news.create');
+        return view('pages.admin.news.create');
     }
 
     /**
@@ -38,18 +50,19 @@ class NewsController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(NewsRequest $request)
     {
         News::create($request->all());
 
         return redirect('news');
     }
 
-    public function add_photo($id, Request $request)
+    public function addPhoto($id, Request $request)
     {
         $photo = NewsPhoto::fromFile($request->file('photo'));
 
-        Vehicle::plateNumber($id)->addPhoto($photo);
+        News::id($id)->addPhoto($photo);
+        // dd($request->file('file'));
     }
 
     /**
@@ -62,7 +75,7 @@ class NewsController extends Controller
     {
         $news = News::id($id);
 
-        return view('pages.news.show', compact('news'));
+        return view('pages.admin.news.show', compact('news'));
     }
 
     /**
@@ -75,7 +88,7 @@ class NewsController extends Controller
     {
         $news = News::id($id);
 
-        return view('pages.news.edit', compact('news'));
+        return view('pages.admin.news.edit', compact('news'));
     }
 
     /**
@@ -107,7 +120,7 @@ class NewsController extends Controller
         return redirct('news');
     }
 
-    public function destroy_photo($id)
+    public function destroyPhoto($id)
     {
         NewsPhoto::findOrFail($id)->delete();
 

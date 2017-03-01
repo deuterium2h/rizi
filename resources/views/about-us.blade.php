@@ -1,10 +1,10 @@
-@extends('layouts.front-end-template')
+@extends('layouts.pages.lgu')
 @section('title')
 	About Us
 @endsection
 @section('content')
 	<div class="wrap">
-		@include('layouts.front-end-header')
+		@include('layouts.partials._front-end-header')
 		<section class="breadcrumb">
 			<div class="container">
 				<div class="row">
@@ -213,6 +213,6 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 			</div>
 		</section>
 		<!-- Footer Widgets -->
-		@include('layouts.front-end-footer')
+		@include('layouts.partials._front-end-footer')
 	</div>
 @endsection

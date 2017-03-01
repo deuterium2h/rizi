@@ -24,7 +24,7 @@
 						{!! Form::label(null, '&nbsp;') !!}
 						{!! Form::text('middle_name', old('middle_name'), ['class' => 'form-control', 'placeholder' => 'Middle Name']) !!}
 					</div>
-					@unless (Auth::guest())	
+					@unless (Auth::guest())
 						<div class="col-md-3">
 							<div class="fileinput fileinput-new" data-provides="fileinput">
 							{!! Form::label('avatar', 'Applicant Photo:') !!}

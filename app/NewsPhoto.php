@@ -2,7 +2,7 @@
 
 namespace App;
 
-// use Image;
+use Image;
 
 use Illuminate\Database\Eloquent\Model;
 
@@ -43,7 +43,7 @@ class NewsPhoto extends Model
 
     public function fileName()
     {
-        $name = sha1(time() . $this->file->getClientOriginalName());
+        $name = sha1($this->file->getClientMimeType() . $this->file->getClientSize() . $this->file->getClientOriginalName());
 
         $extension = $this->file->getClientOriginalExtension();
 
@@ -77,7 +77,7 @@ class NewsPhoto extends Model
     public function makeThumbnail()
     {
         Image::make($this->filePath())
-            ->fit(150)
+            ->fit(200)
             ->save($this->thumbnailPath());
     }
 

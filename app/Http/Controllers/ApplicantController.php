@@ -11,7 +11,7 @@ class ApplicantController extends Controller
 {
     public function apply_for_citizen() //create method
     {
-        return view('pages.applicant.apply-for-citizenship');
+        return view('pages.end-user.apply-for-citizenship');
     }
 
     public function store_citizen(Request $request)
@@ -24,11 +24,17 @@ class ApplicantController extends Controller
 
     public function apply_for_cedula()
     {
-        return 'frontend for cedula';
+        return view('pages.end-user.apply-for-cedula');
     }
+
+    public function apply_for_permit()
+    {
+        return view('pages.end-user.apply-for-permit');
+    }
+
     public function apply_for_clearance()
     {
-        return view('pages.clearance.create'); 
+        return view('pages.end-user.apply-for-clearance'); 
     }
 
     public function store_clearance(Request $request)
@@ -37,10 +43,6 @@ class ApplicantController extends Controller
         $clearance->save();
 
         return $request->id;
-    }
-    public function apply_for_permit()
-    {
-        return 'frontend for permit';
     }
 
     //BACKEND PROCESS
