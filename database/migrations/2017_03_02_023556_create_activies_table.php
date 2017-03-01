@@ -15,6 +15,10 @@ class CreateActiviesTable extends Migration
     {
         Schema::create('activies', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('title');
+            $table->text('description');
+            $table->string('start_date');
+            $table->string('end_date');
             $table->timestamps();
         });
     }
