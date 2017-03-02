@@ -4,10 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Citizen;
 
+use App\Utilities\Curl;
+
 use Illuminate\Http\Request;
 
 class CitizenController extends Controller
 {
+    public function __construct()
+    {
+        $this->middleware('auth');
+    }
+    
     /**
      * Display a listing of the resource.
      *
@@ -16,6 +23,7 @@ class CitizenController extends Controller
     public function index(Request $request)
     {
         $query = $request->get('q');
+        
         $citizens = $query 
         ? Citizen::where('last_name', 'LIKE', "%$query%")
                 ->orWhere('first_name', 'LIKE', "%$query%")
@@ -23,6 +31,7 @@ class CitizenController extends Controller
                 ->orWhere('id', 'LIKE', "%$query%")
                 ->paginate(5)
         : Citizen::latest('updated_at')->paginate(5);
+
         return view('pages.admin.citizen.index', compact('citizens'));
     }
 
@@ -42,8 +51,9 @@ class CitizenController extends Controller
      * @param  \Illuminate\Http\Request  $request
      * @return \Illuminate\Http\Response
      */
-    public function store(Request $request)
+    public function store(Request $request, Curl $curl)
     {
+
         $citizen = new citizen($request->all());
         if ($request->file('avatar')) {
             $file = $request->file('avatar');
@@ -51,6 +61,17 @@ class CitizenController extends Controller
             $request->file('avatar')->move('images/citizens', $fileName);
             $citizen->avatar = $fileName;
         }
+
+        $response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret'   => config('services.captcha.secret'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip()
+        ]));
+
+        if (! $response->success) {
+            abort(400, 'Nope!');
+        }
+
         $citizen->save();
         return redirect('citizens');
     }
@@ -63,7 +84,13 @@ class CitizenController extends Controller
      */
     public function show($id)
     {
-        //
+        $citizen = Citizen::findOrFail($id);
+
+        if(is_null($citizen)){
+            abort(404);
+        }
+
+        return view('pages.admin.citizen.show', compact('citizen'));
     }
 
     /**
@@ -74,7 +101,13 @@ class CitizenController extends Controller
      */
     public function edit($id)
     {
-        //
+        $citizen = Citizen::findOrFail($id);
+
+        if(is_null($citizen)){
+            abort(404);
+        }
+
+        return view('pages.admin.citizen.edit', compact('citizen'));
     }
 
     /**
@@ -108,6 +141,8 @@ class CitizenController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Citizen::findOrFail($id)->delete();
+
+        return redirect('citizen');
     }
 }

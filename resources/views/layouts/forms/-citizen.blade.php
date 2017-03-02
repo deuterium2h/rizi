@@ -116,6 +116,10 @@
 				</div><hr>
 				<div class="row">
 					<div class="col-md-12">
+						<div class="g-recaptcha" data-sitekey="6LeXexcUAAAAAAVyEt0VSq5fDKKeNNecu6Ct1VOM"></div>
+					</div>
+					<br>
+					<div class="col-md-12">
 						{!! Form::submit($submitButton, ['class' => 'btn btn-success form-control']) !!}
 					</div>
 				</div>

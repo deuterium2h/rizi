@@ -15,8 +15,8 @@
 						 </button>
 					</form>
 					<div class="col-md-3">
-						<a href="public/{{ $photo->path }}" data-lity>
-							<img src="public/{{ $photo->thumbnail_path }}" style="border: 5px solid #222; margin-bottom: 3em;">
+						<a href="/{{ $photo->path }}" data-lity>
+							<img src="/{{ $photo->thumbnail_path }}" style="border: 5px solid #222; margin-bottom: 3em;">
 						</a>
 					</div>
 				@endforeach

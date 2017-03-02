@@ -9,16 +9,16 @@
 					</h3>
 					<p>
 						<ul>
-							<li>ALBAR, ROMEO PEÑONES</li>
-							<li>ALFONSO, IVY ELLEN LEYVA</li>
-							<li>ALMONIA, JONATHAN DE LUMEN</li>
-							<li>APOSTOL, YOLANDO LUIS LEORCA</li>
-							<li>ARCILLA, EVELYN SAMSON</li>
-							<li>ARELLANO, EDGAR PACIS</li>
-							<li>AVILA, MARY ANN MARTINEZ</li>
-							<li>AYOHAN, MARILYN OLAGUER</li>
-							<li>AZUELA, ROLAND YÑOTA</li>
-							<li>BALAORO, MA. CECILIA MARTINEZ</li>
+							<li>MANG ROMMY'S SPACE RENETAL 3 UNITS</li>
+							<li>REYMARK INTERNET CAFÉ</li>
+							<li>OJL TUBE ICE CORP.</li>
+							<li>FIELBOY RICE RETAILERS</li>
+							<li>RGD ENTERPRISE</li>
+							<li>SARAH KELLY MERCHANDISING</li>
+							<li>DARK LEGENDS INTERNET CAFÉ</li>
+							<li>STALL RENTAL 4 UNITS</li>
+							<li>ALDA'S WATER STATION</li>
+							<li>MACINAS ELECTRONICS REPAIR SHOP</li>
 						</ul>
 						<a href="">See More...</a>
 					</p>
@@ -33,16 +33,16 @@
 					</h3>
 					<p>
 						<ul>
-							<li>MANG ROMMY'S SPACE RENETAL 3 UNITS</li>
-							<li>REYMARK INTERNET CAFÉ</li>
-							<li>OJL TUBE ICE CORP.</li>
-							<li>FIELBOY RICE RETAILERS</li>
-							<li>RGD ENTERPRISE</li>
-							<li>SARAH KELLY MERCHANDISING</li>
-							<li>DARK LEGENDS INTERNET CAFÉ</li>
-							<li>STALL RENTAL 4 UNITS</li>
-							<li>ALDA'S WATER STATION</li>
-							<li>MACINAS ELECTRONICS REPAIR SHOP</li>
+							<li>ALBAR, ROMEO PEÑONES</li>
+							<li>ALFONSO, IVY ELLEN LEYVA</li>
+							<li>ALMONIA, JONATHAN DE LUMEN</li>
+							<li>APOSTOL, YOLANDO LUIS LEORCA</li>
+							<li>ARCILLA, EVELYN SAMSON</li>
+							<li>ARELLANO, EDGAR PACIS</li>
+							<li>AVILA, MARY ANN MARTINEZ</li>
+							<li>AYOHAN, MARILYN OLAGUER</li>
+							<li>AZUELA, ROLAND YÑOTA</li>
+							<li>BALAORO, MA. CECILIA MARTINEZ</li>
 						</ul>
 						<a href="">See More...</a>
 					</p>

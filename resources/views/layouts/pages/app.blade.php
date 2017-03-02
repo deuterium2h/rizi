@@ -21,6 +21,7 @@
 			]); ?>
 		</script>
 		@yield('custom-css')
+		<script src='https://www.google.com/recaptcha/api.js'></script>
 	</head>
 	<body {{-- class="page-body"  --}}>
 	@if (Auth::guest())

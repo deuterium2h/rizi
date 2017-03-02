@@ -4,6 +4,10 @@
 	Apply for Citizenship
 @endsection
 
+@section('custom-css')
+	<script src='https://www.google.com/recaptcha/api.js'></script>
+@endsection
+
 @section('content')
 	<div class="wrap">
 		@include('layouts.partials._front-end-header')

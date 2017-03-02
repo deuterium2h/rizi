@@ -20,10 +20,10 @@
 						 gender="{{ $citizen->gender}}"
 				>
 					<a href="#" slot="dropdown" data-rel="collapse" class="pull-right"><i class="entypo-down-open"></i></a>
-					<a href="/drivers/{{ $citizen->id }}" slot="view" class="btn btn-default btn-xs">
+					<a href="/citizen/{{ $citizen->id }}" slot="view" class="btn btn-default btn-xs">
 							<i class="entypo-eye" style="color: black;"></i>
 					</a>
-					<img src="images/profiles/{{ $citizen->avatar}}" alt="" style="border-radius: 6%; border: 3px solid #333; width: 175px; height: 175px;">
+					<img src="images/citizens/{{ $citizen->avatar}}" alt="" style="border-radius: 6%; border: 3px solid #333; width: 175px; height: 175px;">
 				</citizen>
 			@endforeach
 		@else

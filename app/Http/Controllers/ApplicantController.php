@@ -6,6 +6,7 @@ use App\Permit;
 use App\Cedula;
 use App\Citizen;
 use App\Clearance;
+use App\Utilities\Curl;
 use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
@@ -15,15 +16,29 @@ class ApplicantController extends Controller
         return view('pages.end-user.apply-for-citizenship');
     }
 
-    public function store_citizen(Request $request)
+    public function store_citizen(Request $request, Curl $curl)
     {
-        $citizen = new Citizen($request->all());
+        $response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
+            'secret'   => config('services.captcha.secret'),
+            'response' => $request->input('g-recaptcha-response'),
+            'remoteip' => $request->ip()
+        ]));
 
-        $citizen->save();
+        if ( ! $request->input('g-recaptcha-response')) {
+            abort(400, 'Abort! Abort!');
+        }
+        
+        if (! $response->success) {
+            $citizen = new Citizen($request->all());
+                
+            $citizen->save();
 
-        $tid = $citizen->id;
+            $tid = $citizen->id;
 
-        return view('pages.end-user.citizenship-pending', compact('tid'));
+            return view('pages.end-user.citizenship-pending', compact('tid'));
+        }
+
+        
     }
 
     public function apply_for_cedula()
