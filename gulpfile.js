@@ -42,7 +42,7 @@ elixir(mix => {
     	'libs/fileinput.js',
     	'libs/resizeable.js',
     	'libs/neon-api.js',
-        'libs/jquery.inputmask.bundle.min.js',
+        'libs/bootstrap-inputmask.min.js',
         'libs/dropzone.js',
         'libs/lity.js',
     	// 'libs/jcrop/jquery.Jcrop.min.js',

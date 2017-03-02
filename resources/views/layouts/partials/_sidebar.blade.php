@@ -4,7 +4,7 @@
 
 		<!-- logo -->
 		<div class="logo">
-			<a href="http://rizi.dev">
+			<a href="/home">
 				<img src="/images/risi-sidebar.png" width="120" alt="" />
 			</a>
 		</div>

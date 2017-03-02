@@ -3,7 +3,7 @@
 		<div class="col-md-12">
 			<header class="site-header">
 				<section class="site-logo">
-					<a href="index.html">
+					<a href="/">
 						<img src="/images/1ANTIPOLO.png" height="100" />
 					</a>
 				</section>
