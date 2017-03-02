@@ -24,7 +24,7 @@
 						{!! Form::label(null, '&nbsp;') !!}
 						{!! Form::text('middle_name', old('middle_name'), ['class' => 'form-control', 'placeholder' => 'Middle Name']) !!}
 					</div>
-					@unless (Auth::guest())
+					@if (Request::is('citizen/create'))
 						<div class="col-md-3">
 							<div class="fileinput fileinput-new" data-provides="fileinput">
 							{!! Form::label('avatar', 'Applicant Photo:') !!}
@@ -38,7 +38,7 @@
 								<a href="#" class="close fileinput-exists" data-dismiss="fileinput" style="float: none">&times;</a>
 							</div>
 						</div>
-					@endunless
+					@endif
 				</div><br>
 				<div class="row" id="2nd-row">
 					<div class="col-md-12">

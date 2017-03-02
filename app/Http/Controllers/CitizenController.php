@@ -33,7 +33,7 @@ class CitizenController extends Controller
      */
     public function create()
     {
-        // return view('pages.citizen.create');
+        return view('pages.admin.citizen.create');
     }
 
     /**

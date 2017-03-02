@@ -20,11 +20,13 @@ Vue.component('citizen', {
 		<div class="col-md-10 col-md-offset-1">
 			<div class="panel panel-dark">
 				<div class="panel-heading">
-					<div class="panel-title"><a href="a">Brgy.ID No.: {{ id }}</a></div>
+					<div class="panel-title">Brgy.ID No.: {{ id }}</div>
 					<div class="panel-options">
-						<a href="#" data-rel="collapse"><i class="entypo-down-open"></i></a>
+						<slot name="view"></slot>
+						<slot name="dropdown"></slot>
 					</div>
 				</div>
+
 				<div class="panel-body">
 					<h4>
 						<center><b>Resident Identification</b></center><hr>
