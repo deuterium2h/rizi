@@ -9,7 +9,10 @@ class Permit extends Model
     protected $fillable = [
     	'id',
     	'business_name',
+    	'business_type',
     	'business_address',
-    	'business_owner'
+    	'payment',
+    	'business_owner',
+    	'validity'
     ];
 }

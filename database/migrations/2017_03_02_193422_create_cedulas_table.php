@@ -4,7 +4,7 @@ use Illuminate\Support\Facades\Schema;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Database\Migrations\Migration;
 
-class CreatePermitsTable extends Migration
+class CreateCedulasTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,14 +13,8 @@ class CreatePermitsTable extends Migration
      */
     public function up()
     {
-        Schema::create('permits', function (Blueprint $table) {
+        Schema::create('cedulas', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('business_name');
-            $table->string('business_type');
-            $table->text('business_address');
-            $table->string('payment');
-            $table->string('business_owner');
-            $table->string('validity');
             $table->timestamps();
         });
     }
@@ -32,6 +26,6 @@ class CreatePermitsTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('permits');
+        Schema::dropIfExists('cedulas');
     }
 }

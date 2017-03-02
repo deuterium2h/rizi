@@ -20,6 +20,7 @@ elixir(mix => {
         'libs/joinable.js',
         'libs/neon-slider.js',
         'libs/lity.js',
+        'libs/bootstrap-inputmask.min.js',
         'libs/neon-custom-user.js'
     ], './public/js/user.js')
         .styles([

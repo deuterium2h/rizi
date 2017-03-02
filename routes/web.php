@@ -31,8 +31,13 @@ Route::resource('citizen', 'CitizenController');
 //Permit Controller
 Route::resource('permit', 'PermitController');
 
+//Cedula Controller
+Route::resource('cedula', 'CedulaController');
+
 //Activity Controller
 Route::resource('activity', 'ActivityController');
+Route::post('activity/{$id}/photos', ['as' => 'store_photo_path', 'uses' => 'ActivityController@addPhoto']);
+Route::delete('photos/{$id}', 'ActivityController@destroyPhoto');
 
 //News Controller
 Route::resource('news', 'NewsController');

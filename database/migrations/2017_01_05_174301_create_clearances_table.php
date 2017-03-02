@@ -15,6 +15,9 @@ class CreateClearancesTable extends Migration
     {
         Schema::create('clearances', function (Blueprint $table) {
             $table->increments('id');
+            $table->string('name');
+            $table->string('address');
+            $table->string('validity');
             $table->timestamps();
         });
     }
