@@ -21,8 +21,8 @@ class CitizenController extends Controller
                 ->orWhere('first_name', 'LIKE', "%$query%")
                 ->orWhere('middle_name', 'LIKE', "%$query%")
                 ->orWhere('id', 'LIKE', "%$query%")
-                ->paginate(10)
-        : Citizen::latest('updated_at')->paginate(10);
+                ->paginate(5)
+        : Citizen::latest('updated_at')->paginate(5);
         return view('pages.admin.citizen.index', compact('citizens'));
     }
 

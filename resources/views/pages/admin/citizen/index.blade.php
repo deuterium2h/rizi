@@ -12,7 +12,6 @@
 	<br>
 	<div id="data-card" class="row">
 		@if ($citizens->count())
-			{{ $citizens->links() }}
 			@foreach($citizens as $citizen)
 				<citizen id="{{ $citizen->id }}"
 						 name="{{ $citizen->last_name }}, {{ $citizen->first_name }} {{ $citizen->middle_name }}"
@@ -20,10 +19,10 @@
 						 birthday="{{ $citizen->birthday }}"
 						 gender="{{ $citizen->gender}}"
 				>
+					<a href="#" slot="dropdown" data-rel="collapse" class="pull-right"><i class="entypo-down-open"></i></a>
 					<a href="/drivers/{{ $citizen->id }}" slot="view" class="btn btn-default btn-xs">
-							<i class="fa fa-eye fa-lg"></i>
+							<i class="entypo-eye" style="color: black;"></i>
 					</a>
-					<a href="#" slot="dropdown" data-rel="collapse"><i class="entypo-down-open"></i></a>
 					<img src="images/profiles/{{ $citizen->avatar}}" alt="" style="border-radius: 6%; border: 3px solid #333; width: 175px; height: 175px;">
 				</citizen>
 			@endforeach
@@ -32,6 +31,7 @@
 				<h2>No Results Found</h2>
 			</div>
 		@endif
+			<center>{{ $citizens->links() }}</center>
 	</div>
 
 @stop
