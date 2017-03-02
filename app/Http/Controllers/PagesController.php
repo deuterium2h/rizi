@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use App\Activity;
 use App\Citizen;
 use App\News;
 use Illuminate\Http\Request;
@@ -18,6 +19,7 @@ class PagesController extends Controller
 	public function welcome()
 	{
         $articles = News::latest('updated_at')->limit(3)->get();
+
 		return view('welcome', compact('articles'));
 	}
 
@@ -25,6 +27,7 @@ class PagesController extends Controller
     {
     	return view('about-us');
     }
+
     /**
      *
      * News Page
@@ -44,6 +47,7 @@ class PagesController extends Controller
 
         return view('pages.end-user.activity-post', compact('activity'));
     }
+
     public function news()
     {
         $articles = News::latest('updated_at')->paginate(3);
@@ -56,5 +60,26 @@ class PagesController extends Controller
         $news = News::id($id);
 
         return view('pages.end-user.news-post', compact('news'));
+    }
+
+    //BACKEND PROCESS
+    public function citizen()
+    {
+        return 'list of pre-registered citizen';
+    }
+    
+    public function cedula()
+    {
+        return 'hi';
+    }
+
+    public function clearance()
+    {
+        return 'wew';
+    }
+
+    public function permit()
+    {
+        return 'kkkd';
     }
 }

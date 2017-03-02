@@ -11,7 +11,7 @@ class Citizen extends Model
         'first_name',
         'middle_name',
         'address',
-        'birthday',
+        'birthdate',
         'tin',
         'sss',
         'height',
@@ -22,6 +22,7 @@ class Citizen extends Model
         'civil_status',
         'guardian_name',
         'guardian_address',
-        'guardian_contact_num'
+        'guardian_contact_num',
+        'validity'
     ];
 }

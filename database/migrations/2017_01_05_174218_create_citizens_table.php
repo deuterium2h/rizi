@@ -15,7 +15,7 @@ class CreateCitizensTable extends Migration
     {
         Schema::create('citizens', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('avatar');
+            $table->string('avatar')->default('default.png');
             $table->string('last_name');
             $table->string('first_name');
             $table->string('middle_name');

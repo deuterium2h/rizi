@@ -3,7 +3,7 @@
 		<div class="row">
 			<div class="col-sm-6">
 				<a href="#">
-					<img src="/images/brgy-small.png" width="100" />&nbsp;Barangay San Isidro, Antipolo, Rizal
+					<img src="/images/brgy-small.png" width="100" />
 				</a>
 			</div>
 			<div class="col-sm-3">

@@ -4,7 +4,7 @@
 			<header class="site-header">
 				<section class="site-logo">
 					<a href="index.html">
-						<img src="/images/risi-sidebar.png" width="120" />
+						<img src="/images/1ANTIPOLO.png" height="100" />
 					</a>
 				</section>
 
@@ -15,7 +15,7 @@
 								<span>Home</span>
 							</a>
 						</li>
-						<li class="{{ Request::is('brgy-activies')||Request::is('brgy-ordinance')||Request::is('local-news')||Request::is('local-news/*') ? 'active' : '' }}">
+						<li class="{{ Request::is('brgy-activities*')||Request::is('brgy-ordinance')||Request::is('local-news*') ? 'active' : '' }}">
 							<a>
 								<span>Services</span>
 							</a>

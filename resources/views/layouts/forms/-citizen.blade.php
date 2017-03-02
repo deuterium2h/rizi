@@ -74,8 +74,8 @@
 						{!! Form::text('sss', old('sss'), ['class' => 'form-control', 'placeholder' => 'XXX-XXX-XXX', 'required', 'data-mask' => '999-999-999']) !!}
 					</div>
 					<div class="col-md-2">
-						{!! Form::label('blood_type', 'Blood Type:') !!}
-						{!! Form::select('blood_type', 
+						{!! Form::label('bloodtype', 'Blood Type:') !!}
+						{!! Form::select('bloodtype', 
 							['AB+' => 'AB+', 'AB-' => 'AB-', 'A+' => 'A+', 'A-' => 'A-', 'B+' => 'B+', 'B-' => 'B-', 'O+' => 'O+', 'O-' => 'O-' ], null, ['class' => 'form-control', 'placeholder' => 'Select a Blood Type']) !!}
 					</div>
 					<div class="col-md-2">
