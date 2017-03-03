@@ -21,6 +21,8 @@ class CreatePermitsTable extends Migration
             $table->string('payment');
             $table->string('business_owner');
             $table->string('validity');
+            $table->boolean('is_registered')->default(0);
+            $table->boolean('is_valid')->default(0);
             $table->timestamps();
         });
     }

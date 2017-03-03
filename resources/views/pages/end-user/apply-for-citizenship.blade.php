@@ -13,7 +13,7 @@
 		@include('layouts.partials._front-end-header')
 		<hr class="no-top-margin">
 		<div class="col-md-10 col-md-offset-1">
-		{!! Form::open(['url' => 'apply-for-citizenship', 'files' => true]) !!}
+			{!! Form::open(['url' => 'apply-for-citizenship', 'files' => true]) !!}
 			<br>@include('layouts.forms.-citizen', ['submitButton' => 'Register'])<br>
 		</div>
 		<div class="container">

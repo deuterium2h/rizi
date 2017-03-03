@@ -73,6 +73,57 @@ Vue.component('citizen', {
 	`
 });
 
+Vue.component('permit', {
+	props: ['name', 'owner', 'validity', 'address'],
+
+	template: `
+		<div class="col-md-10 col-md-offset-1">
+			<div class="panel panel-dark">
+				<div class="panel-heading">
+					<div class="panel-title">Owner: {{ owner }}</div>
+					<div class="panel-options">
+						&nbsp;
+						<slot name="update"></slot>
+						&nbsp;
+						<slot name="view"></slot>
+						&nbsp;
+						<slot name="dropdown"></slot>
+					</div>
+				</div>
+
+				<div class="panel-body">
+					<h4>
+						<center><b>Business Permit Information</b></center><hr>
+						<div class="row">
+							<div class="col-md-12">
+								<div class="row">
+									<b><label for="name" class="control-label col-md-2">Business Name:</label></b>
+									<div class="col-md-10">{{ name }}</div>
+								</div>
+								<br>
+								<div class="row">
+									<b><label for="address" class="control-label col-md-2">Address:</label></b>
+									<div class="col-md-10">
+										{{ address }}
+									</div>
+								</div>
+								<br>
+								<div class="row">
+									<b><label for="validity" class="control-label col-md-2">Validity:</label></b>
+									<div class="col-md-10">
+										{{ validity }}
+									</div>
+								</div>
+								<br>
+							</div>
+						</div>
+					</h4>
+				</div>
+			</div>
+		</div>
+	`
+});
+
 const datacard = new Vue({
 	el: '#data-card'
 });

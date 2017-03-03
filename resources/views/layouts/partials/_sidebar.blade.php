@@ -43,32 +43,32 @@
 				<span>Home</span>
 			</a>
 		</li>
-		<li class="{{ Request::is('citizen*')||Request::is('permit*')||Request::is('clearance*')||Request::is('cedula*') ? 'active opened active' : '' }}">
+		<li class="{{ Request::is('citizen*')||Request::is('permit*')||Request::is('clearance*')||Request::is('cedula*') ? 'opened' : '' }}">
 			<a href="#">
 				<i class="entypo-docs"></i>
 				<span>Barangay Documents</span>
 				{{-- <span class="badge badge-secondary">8</span> --}}
 			</a>
 			<ul>
-				<li class="{{ Request::is('citizen') ? 'active' : '' }}">
+				<li class="{{ Request::is('citizen*') ? 'active' : '' }}">
 					<a href="/citizen">
 						<i class="entypo-vcard"></i>
 						<span>Citizens (Barangay ID)</span>
 					</a>
 				</li>
-				<li class="{{ Request::is('permit') ? 'active' : '' }}">
+				<li class="{{ Request::is('permit*') ? 'active' : '' }}">
 					<a href="/permit">
 						<i class="entypo-suitcase"></i>
 						<span>Barangay Business Permit</span>
 					</a>
 				</li>
-				<li class="{{ Request::is('clearance') ? 'active' : '' }}">
+				<li class="{{ Request::is('clearance*') ? 'active' : '' }}">
 					<a href="/clearance">
 						<i class="entypo-doc-text"></i>
 						<span>Barangay Clearance</span>
 					</a>
 				</li>
-				<li class="{{ Request::is('cedula') ? 'active' : '' }}">
+				<li class="{{ Request::is('cedula*') ? 'active' : '' }}">
 					<a href="/cedula">
 						<i class="entypo-newspaper"></i>
 						<span>Barangay Cedula</span>
@@ -76,7 +76,7 @@
 				</li>
 			</ul>
 		</li>
-		<li class="{{ Request::is('news') ? 'active' : '' }}">
+		<li class="{{ Request::is('news*') ? 'active' : '' }}">
 			<a href="/news">
 				<i class="entypo-clipboard"></i>
 				<span>Barangay News</span>

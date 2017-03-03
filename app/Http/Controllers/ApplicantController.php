@@ -11,80 +11,93 @@ use Illuminate\Http\Request;
 
 class ApplicantController extends Controller
 {
-    public function apply_for_citizen() //create method
-    {
-        return view('pages.end-user.apply-for-citizenship');
-    }
+	public function apply_for_citizen() //create method
+	{
+		return view('pages.end-user.apply-for-citizenship');
+	}
 
-    public function store_citizen(Request $request, Curl $curl)
-    {
-        $response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
-            'secret'   => config('services.captcha.secret'),
-            'response' => $request->input('g-recaptcha-response'),
-            'remoteip' => $request->ip()
-        ]));
+	public function store_citizen(Request $request, Curl $curl)
+	{
+		$response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
+			'secret'   => config('services.captcha.secret'),
+			'response' => $request->input('g-recaptcha-response'),
+			'remoteip' => $request->ip()
+		]));
 
-        if ( ! $request->input('g-recaptcha-response')) {
-            abort(400, 'Captcha Not Answered, Please go back');
-        }
-        
-        if (! $response->success) {
-            $citizen = new Citizen($request->all());
-                
-            $citizen->save();
+		if ( ! $request->input('g-recaptcha-response')) {
+			abort(400, 'Captcha Not Answered, Please go back');
+		}
+		
+		if (! $response->success) {
+			$citizen = new Citizen($request->all());
+				
+			$citizen->save();
 
-            $tid = $citizen->id;
+			$tid = $citizen->id;
 
-            return view('pages.end-user.citizenship-pending', compact('tid'));
-        }        
-    }
+			return view('pages.end-user.pending', compact('tid'));
+		}
+	}
 
-    public function apply_for_cedula()
-    {
-        return view('pages.end-user.apply-for-cedula');
-    }
+	public function apply_for_cedula()
+	{
+		return view('pages.end-user.apply-for-cedula');
+	}
 
-    public function store_cedula(Request $request)
-    {
-        $cedula = new Cedula($request->all());
+	public function store_cedula(Request $request)
+	{
+		$cedula = new Cedula($request->all());
 
-        $cedula->save();
+		$cedula->save();
 
-        $tid = $cedula->id;
+		$tid = $cedula->id;
 
-        return view('pages.end-user.cedula-pending', compact('tid'));
-    }
+		return view('pages.end-user.pending', compact('tid'));
+	}
 
-    public function apply_for_permit()
-    {
-        return view('pages.end-user.apply-for-permit');
-    }
+	public function apply_for_permit()
+	{
+		return view('pages.end-user.apply-for-permit');
+	}
 
-    public function store_permit(Request $request)
-    {
-        $permit = new Permit($request->all());
+	public function store_permit(Request $request, Curl $curl)
+	{
+		$response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
+			'secret'   => config('services.captcha.secret'),
+			'response' => $request->input('g-recaptcha-response'),
+			'remoteip' => $request->ip()
+		]));
 
-        $permit->save();
+		if ( ! $request->input('g-recaptcha-response')) {
+			abort(400, 'Captcha Not Answered, Please go back');
+		}
+		
+		if (! $response->success) {
+			$permit = new Permit($request->all());
 
-        $tid = $permit->id;
+			$permit->save();
 
-        return view('pages.end-user.permit-pending', compact('tid'));
-    }
+			$tid = $permit->id;
 
-    public function apply_for_clearance()
-    {
-        return view('pages.end-user.apply-for-clearance'); 
-    }
+			return view('pages.end-user.pending', compact('tid'));
+		}
+		
+	}
 
-    public function store_clearance(Request $request)
-    {
-        $clearance = new Clearance($request->all());
+	public function apply_for_clearance()
+	{
+		return view('pages.end-user.apply-for-clearance'); 
+	}
 
-        $clearance->save();
+	public function store_clearance(Request $request)
+	{
+		$clearance = new Clearance($request->all());
 
-        $tid = $clearance->id;
+		$clearance->save();
 
-        return view('pages.end-user.clearance-pending', compact('tid'));
-    }
+		$tid = $clearance->id;
+
+		return view('pages.end-user.pending', compact('tid'));
+	}
 
 }

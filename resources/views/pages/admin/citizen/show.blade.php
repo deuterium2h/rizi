@@ -1,7 +1,7 @@
 @extends('layouts.pages.app')
 
 @section('title')
-	Show Citizen Member
+	Show Citizen
 @stop
 
 @section('content')
