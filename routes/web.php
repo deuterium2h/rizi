@@ -14,13 +14,14 @@ Route::get('/about-us', 'PagesController@about_us');
 //News Page
 Route::get('/local-news', 'PagesController@news');
 Route::get('/local-news/{id}', 'PagesController@news_post');
-
 //Activities Page
 Route::get('/brgy-activities', 'PagesController@activities');
 Route::get('/brgy-activities/{id}', 'PagesController@activity_post');
 
 //CMS
 Route::get('/home', 'HomeController@index');
+Route::get('/edit-profile', 'HomeController@edit_profile');
+Route::post('/edit-profile', 'HomeController@upload_image');
 
 //Clearance Controller
 Route::resource('clearance', 'ClearanceController');

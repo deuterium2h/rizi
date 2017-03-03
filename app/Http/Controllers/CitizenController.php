@@ -53,27 +53,35 @@ class CitizenController extends Controller
      */
     public function store(Request $request, Curl $curl)
     {
-
-        $citizen = new citizen($request->all());
-        if ($request->file('avatar')) {
-            $file = $request->file('avatar');
-            $fileName = sha1(time() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
-            $request->file('avatar')->move('images/citizens', $fileName);
-            $citizen->avatar = $fileName;
-        }
-
+        // dd($request->all());
         $response = json_decode($curl->post('https://www.google.com/recaptcha/api/siteverify', [
             'secret'   => config('services.captcha.secret'),
             'response' => $request->input('g-recaptcha-response'),
             'remoteip' => $request->ip()
         ]));
 
-        if (! $response->success) {
-            abort(400, 'Nope!');
+        if ( ! $request->input('g-recaptcha-response')) {
+            abort(400, 'Captcha Not Answered, Please go back');
         }
+        
+        if (! $response->success) {
+            $citizen = new Citizen($request->all());
+            
+            if ($request->file('avatar')) {
+                $file = $request->file('avatar');
+                $fileName = sha1(time() . $file->getClientOriginalName()) . '.' . $file->getClientOriginalExtension();
+                $request->file('avatar')->move('images/citizens', $fileName);
+                $citizen->avatar = $fileName;
+            }
+            
+            $citizen->is_registered = 1;
+            
+            $citizen->is_valid = 1;       
+            
+            $citizen->save();
 
-        $citizen->save();
-        return redirect('citizens');
+            return redirect('citizen');
+        }
     }
 
     /**

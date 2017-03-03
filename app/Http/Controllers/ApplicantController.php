@@ -25,7 +25,7 @@ class ApplicantController extends Controller
         ]));
 
         if ( ! $request->input('g-recaptcha-response')) {
-            abort(400, 'Abort! Abort!');
+            abort(400, 'Captcha Not Answered, Please go back');
         }
         
         if (! $response->success) {
@@ -36,9 +36,7 @@ class ApplicantController extends Controller
             $tid = $citizen->id;
 
             return view('pages.end-user.citizenship-pending', compact('tid'));
-        }
-
-        
+        }        
     }
 
     public function apply_for_cedula()

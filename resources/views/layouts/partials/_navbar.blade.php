@@ -6,7 +6,7 @@
 			<!-- Profile Info -->
 			<li class="profile-info dropdown"><!-- add class "pull-right" if you want to place this from right -->
 				<a href="#" class="dropdown-toggle" data-toggle="dropdown">
-					<img src="/images/profiles/thumb-1@2x.png" alt="" class="img-circle" width="44" />
+					<img src="/images/profiles/{{ Auth::user()->avatar }}" alt="" class="img-circle" width="44" />
 					{{ Auth::user()->name }}  
 				</a>
 
@@ -17,7 +17,7 @@
 
 					<!-- Profile sub-links -->
 					<li>
-						<a href="extra-timeline.html">
+						<a href="/edit-profile">
 							<i class="entypo-user"></i>
 							Edit Profile
 						</a>

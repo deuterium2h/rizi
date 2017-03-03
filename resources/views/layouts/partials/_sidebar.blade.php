@@ -43,22 +43,22 @@
 				<span>Home</span>
 			</a>
 		</li>
-		<li class="{{ Request::is('citizen')||Request::is('permit')||Request::is('clearance') ? 'active opened active' : '' }}">
-			<a href="citizen">
+		<li class="{{ Request::is('citizen*')||Request::is('permit*')||Request::is('clearance*')||Request::is('cedula*') ? 'active opened active' : '' }}">
+			<a href="#">
 				<i class="entypo-docs"></i>
 				<span>Barangay Documents</span>
-				<span class="badge badge-secondary">8</span>
+				{{-- <span class="badge badge-secondary">8</span> --}}
 			</a>
 			<ul>
 				<li class="{{ Request::is('citizen') ? 'active' : '' }}">
 					<a href="/citizen">
-						<i class="entypo-users"></i>
+						<i class="entypo-vcard"></i>
 						<span>Citizens (Barangay ID)</span>
 					</a>
 				</li>
 				<li class="{{ Request::is('permit') ? 'active' : '' }}">
 					<a href="/permit">
-						<i class="entypo-newspaper"></i>
+						<i class="entypo-suitcase"></i>
 						<span>Barangay Business Permit</span>
 					</a>
 				</li>
@@ -66,6 +66,12 @@
 					<a href="/clearance">
 						<i class="entypo-doc-text"></i>
 						<span>Barangay Clearance</span>
+					</a>
+				</li>
+				<li class="{{ Request::is('cedula') ? 'active' : '' }}">
+					<a href="/cedula">
+						<i class="entypo-newspaper"></i>
+						<span>Barangay Cedula</span>
 					</a>
 				</li>
 			</ul>
@@ -128,42 +134,6 @@
 				<li>
 					<a href="forms-validation.html">
 						<span>Area 4</span>
-					</a>
-				</li>
-			</ul>
-		</li>
-		<li>
-			<a href="extra-icons.html">
-				<i class="entypo-bag"></i>
-				<span>Extra</span>
-				<span class="badge badge-info badge-roundless">New Items</span>
-			</a>
-			<ul>
-				<li>
-					<a href="extra-portlets.html">
-						<span>Portlets</span>
-					</a>
-				</li>
-				<li>
-					<a href="extra-gallery.html">
-						<span>Gallery</span>
-					</a>
-					<ul>
-						<li>
-							<a href="extra-gallery.html">
-								<span>Albums</span>
-							</a>
-						</li>
-						<li>
-							<a href="extra-gallery-single.html">
-								<span>Single Album</span>
-							</a>
-						</li>
-					</ul>
-				</li>
-				<li>
-					<a href="extra-profile.html">
-						<span>Profile</span>
 					</a>
 				</li>
 			</ul>

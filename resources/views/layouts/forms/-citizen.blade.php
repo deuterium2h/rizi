@@ -24,7 +24,7 @@
 						{!! Form::label(null, '&nbsp;') !!}
 						{!! Form::text('middle_name', old('middle_name'), ['class' => 'form-control', 'placeholder' => 'Middle Name']) !!}
 					</div>
-					@if (Request::is('citizen/create'))
+					@if (Request::is('citizen/*'))
 						<div class="col-md-3">
 							<div class="fileinput fileinput-new" data-provides="fileinput">
 							{!! Form::label('avatar', 'Applicant Photo:') !!}

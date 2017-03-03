@@ -23,6 +23,8 @@ Vue.component('citizen', {
 					<div class="panel-title">Brgy.ID No.: {{ id }}</div>
 					<div class="panel-options">
 						&nbsp;
+						<slot name="update"></slot>
+						&nbsp;
 						<slot name="view"></slot>
 						&nbsp;
 						<slot name="dropdown"></slot>

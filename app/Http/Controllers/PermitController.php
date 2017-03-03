@@ -18,7 +18,7 @@ class PermitController extends Controller
      */
     public function index()
     {
-        return 'olah';
+        return view('pages.admin.permit.index');
     }
 
     /**
