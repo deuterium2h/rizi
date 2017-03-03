@@ -82,6 +82,12 @@
 				<span>Barangay News</span>
 			</a>
 		</li>
+		<li class="{{ Request::is('activity*') ? 'active' : '' }}">
+			<a href="/activity">
+				<i class="entypo-star"></i>
+				<span>Barangay Activities</span>
+			</a>
+		</li>
 		<li>
 			<a href="">
 				<i class="entypo-flow-tree"></i>
@@ -110,7 +116,7 @@
 				</li>
 			</ul>
 		</li>
-		<li>
+		<!-- <li>
 			<a href="forms-main.html">
 				<i class="entypo-chart-area"></i>
 				<span>Barangay Status</span>
@@ -137,6 +143,6 @@
 					</a>
 				</li>
 			</ul>
-		</li>
+		</li> -->
 	</ul>
 </div>

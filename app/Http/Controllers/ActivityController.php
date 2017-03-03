@@ -4,6 +4,14 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 
+use App\Activity;
+
+use App\ActivityPhoto;
+
+use Illuminate\Database\Eloquent\Builder;
+
+use App\Http\Controllers\Controller;
+
 class ActivityController extends Controller
 {
     public function __construct()
@@ -16,9 +24,11 @@ class ActivityController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function index(Request $request)
     {
-        //
+        $activities = Activity::latest('updated_at')->get();
+        
+        return view('pages.admin.activity.index', compact('activities'));
     }
 
     /**
@@ -28,7 +38,7 @@ class ActivityController extends Controller
      */
     public function create()
     {
-        //
+        return view('pages.admin.activity.create');
     }
 
     /**
@@ -39,7 +49,17 @@ class ActivityController extends Controller
      */
     public function store(Request $request)
     {
-        //
+        Activity::create($request->all());
+
+        return redirect('activity');
+    }
+
+    public function addPhoto($id, Request $request)
+    {
+        $photo = ActivityPhoto::fromFile($request->file('photo'));
+
+        Activity::id($id)->addPhoto($photo);
+        // dd($request->file('file'));
     }
 
     /**
@@ -50,7 +70,9 @@ class ActivityController extends Controller
      */
     public function show($id)
     {
-        //
+        $activity = Activity::id($id);
+
+        return view('pages.admin.activity.show', compact('activity'));
     }
 
     /**
@@ -61,7 +83,9 @@ class ActivityController extends Controller
      */
     public function edit($id)
     {
-        //
+        $activity = Activity::id($id);
+
+        return view('pages.admin.news.edit', compact('activity'));
     }
 
     /**
@@ -73,7 +97,11 @@ class ActivityController extends Controller
      */
     public function update(Request $request, $id)
     {
-        //
+        $activity = Activity::findOrFail($id);
+
+        $activity->update($request->all());
+
+        return redirect('activity');
     }
 
     /**
@@ -84,6 +112,15 @@ class ActivityController extends Controller
      */
     public function destroy($id)
     {
-        //
+        Activity::findOrFail($id)->delete();
+
+        return redirct('activity');
+    }
+
+    public function destroyPhoto($id)
+    {
+        ActivityPhoto::findOrFail($id)->delete();
+
+        return back();
     }
 }

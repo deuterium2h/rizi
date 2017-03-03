@@ -32,6 +32,6 @@
 				<h2>No Results Found</h2>
 			</div>
 		@endif
-		<center>{{ $citizens->links() }}</center>
+		<center>{{ $permits->links() }}</center>
 	</div>
 @endsection
