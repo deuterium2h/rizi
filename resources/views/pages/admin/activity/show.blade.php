@@ -1,7 +1,7 @@
 @extends('layouts.pages.app')
 
 @section('title')
-	{{$news->title}}
+	{{ $activity->title }}
 @endsection
 
 @section('custom-css')
@@ -19,16 +19,14 @@
 @endsection
 
 @section('content')
-	<legend><h1>{{ $news->title }}</h1>
-		<small>By: {{ $news->posted_by }} | Category: {{ $news->category }}</small>
-	</legend>
+	<h1>{{ $activity->title }}</h1><hr>
 	<div class="row">
 		<div class="col-md-12">
-			@include('layouts.show._news')
+			@include('layouts.show._activity')
 		</div>
 		<div class="col-md-12">
-			<b><legend>Add News Photos</legend></b>
-			<form id="addNewsPhoto" action="{{ route('store_photo_path', [$news->id]) }}" method="POST" class="dropzone">
+			<b><legend>Add Activity Photos</legend></b>
+			<form id="addActivityPhoto" action="{{ route('store_photo_path', [$activity->id]) }}" method="POST" class="dropzone">
 				{{ csrf_field() }}
 			</form>
 		</div>
@@ -36,7 +34,7 @@
 @endsection
 @section('custom-js')
 	<script>
-		Dropzone.options.addNewsPhoto = {
+		Dropzone.options.addActivityPhoto = {
 			paramName: 'photo', 
 			maxFilesize: 4,
 			acceptedFiles: '.jpg, .jpeg, .png, .bmp',

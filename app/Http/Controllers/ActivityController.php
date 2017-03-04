@@ -85,7 +85,7 @@ class ActivityController extends Controller
     {
         $activity = Activity::id($id);
 
-        return view('pages.admin.news.edit', compact('activity'));
+        return view('pages.admin.activity.edit', compact('activity'));
     }
 
     /**
