@@ -10,7 +10,9 @@ class Activity extends Model
 		'title',
 		'description',
 		'start_date',
-		'end_date'
+		'end_date',
+		'start_time',
+		'end_time'
 	];
     public static function id($id)
 	{

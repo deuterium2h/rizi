@@ -2,10 +2,10 @@
 	<p>{{ $activity->body }}</p>
 	<div class="row">
 		<div class="col-md-6">
-			{{ $activity->start_date }}
+			{{ $activity->start_date }} @ {{ $activity->start_time }}
 		</div>
 		<div class="col-md-6">
-			{{ $activity->end_date }}
+			{{ $activity->end_date }} @ {{ $activity->end_time }}
 		</div>
 	</div>
 </div>

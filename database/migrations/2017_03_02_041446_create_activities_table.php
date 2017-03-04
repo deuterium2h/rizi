@@ -19,6 +19,8 @@ class CreateActivitiesTable extends Migration
             $table->text('description');
             $table->string('start_date');
             $table->string('end_date');
+            $table->string('start_time');
+            $table->string('end_time');
             $table->timestamps();
         });
     }

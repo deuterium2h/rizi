@@ -17,6 +17,18 @@
 			{!! Form::date('end_date', null, ['class' => 'form-control']) !!}
 		</div>
 	</div>
+	<div class="form-group">
+		<div class="row">
+			<div class="col-md-6">
+				{!! Form::label('start_time', 'Start Time:') !!}
+				{!! Form::time('start_time', null, ['class' => 'form-control']) !!}
+			</div>
+			<div class="col-md-6">
+				{!! Form::label('end_time', 'End Time:') !!}
+				{!! Form::time('end_time', null, ['class' => 'form-control']) !!}
+			</div>
+		</div>
+	</div>
 </div>
 <div class="form-group">
 	{!! Form::submit($submitButton, ['class' => 'btn btn-primary form-control']) !!}

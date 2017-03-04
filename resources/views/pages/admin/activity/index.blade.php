@@ -16,16 +16,16 @@
 		@foreach($activities as $activity)
 		<div class="col-md-12">
 			<article>
-				<h2><a href="/activity/{{ $activity->id }}"> {{ $activity->title}}</a></h2>
+				<h2><a href="/activity/{{ $activity->id }}">{{ $activity->title}}</a></h2>
 				<div class="body">
-					{{ $activity->description }}
+					{{ str_limit($activity->description, 500) }}
 				</div>
 				<div class="row">
 					<div class="col-md-6">
-						{{ $activity->start_date }}
+						<b>Start:</b> {{ $activity->start_date }} @ {{ $activity->start_time }}
 					</div>
 					<div class="col-md-6">
-						{{ $activity->end_date }}
+						<b>End:</b> {{ $activity->end_date }} @ {{ $activity->end_time }}
 					</div>
 				</div>
 			</article>

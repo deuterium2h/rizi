@@ -14,7 +14,7 @@
 			<article>
 				<h2><a href="/news/{{ $news->id }}"> {{ $news->title}} | By: {{ $news->posted_by }} </a></h2>
 				<div class="body">
-					{{ $news->body }}
+					{{ str_limit($news->body, 500) }}
 				</div>
 			</article>
 		</div>
