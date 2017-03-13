@@ -7,16 +7,16 @@
 		<div class="sidebar-content">
 			<ul>
 				<li>
-					<a href="#">Art Direction <span>(3)</span></a>
+					<a href="?entertainment">Entertainment<span>{{  }}</span></a>
 				</li>
 				<li>
-					<a href="#">Photography <span>(7)</span></a>
+					<a href="?politics">Politics<span>{{  }}</span></a>
 				</li>
 				<li>
-					<a href="#">3D Modelling <span>(5)</span></a>
+					<a href="?sports">Sports<span>{{  }}</span></a>
 				</li>
 				<li>
-					<a href="#">Web Design <span>(1)</span></a>
+					<a href="?others">Others<span>{{  }}</span></a>
 				</li>
 			</ul>
 		</div>

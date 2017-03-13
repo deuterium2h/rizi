@@ -17,15 +17,15 @@
 						</div>
 						<div class="slide-image">	
 							<a href="#">
-								<img src="images/01.png" class="img-responsive" width="50%" />
+								<img src="/images/01.png" class="img-responsive" width="50%" />
 							</a>
 						</div>
 					</div>					
 					<!-- Slide 2 -->
-					<div class="slide" data-bg="images/slide-img-1-bg.png">
+					<div class="slide" data-bg="/images/slide-img-1-bg.png">
 						<div class="slide-image">
 							<a href="#">
-								<img src="images/02.png" class="img-responsive" />
+								<img src="/images/02.png" class="img-responsive" />
 							</a>
 						</div>
 						<div class="slide-content text-right">
@@ -51,7 +51,7 @@
 						</div>
 						<div class="slide-image">
 							<a href="#">
-								<img src="images/03.png" class="img-responsive" width="40%" />
+								<img src="/images/03.png" class="img-responsive" width="40%" />
 							</a>
 						</div>
 					</div>

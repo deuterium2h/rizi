@@ -14,7 +14,7 @@
 				<!-- Portfolio Item in Widget -->
 				<div class="portfolio-item">
 					<a href="/local-news/{{ $news->id }}" class="image">
-						<img src="{{ $news->photos->first()->path }}" class="img-rounded img-size" />
+						<img src="/{{ $news->photos->first()->path }}" class="img-rounded img-size" />
 						<span class="hover-zoom"></span>
 					</a>
 					<h4>

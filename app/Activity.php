@@ -19,7 +19,7 @@ class Activity extends Model
 		return static::where(compact('id'))->firstOrFail();
 	}
 
-	public function addPhoto(NewsPhoto $photo)
+	public function addPhoto(ActivityPhoto $photo)
 	{
 		return $this->photos()->save($photo);
 	}

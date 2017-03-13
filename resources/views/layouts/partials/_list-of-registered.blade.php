@@ -9,6 +9,12 @@
 					</h3>
 					<p>
 						<ul>
+							{{-- 
+							@foreach($permits as $permit)
+								<li>{{ $permit->business_name}}</li>
+							@endforeach
+							**!!LIMIT TO 10!!**
+							--}}
 							<li>MANG ROMMY'S SPACE RENETAL 3 UNITS</li>
 							<li>REYMARK INTERNET CAFÉ</li>
 							<li>OJL TUBE ICE CORP.</li>
@@ -33,6 +39,12 @@
 					</h3>
 					<p>
 						<ul>
+							{{-- 
+							@foreach($citizens as $citizen)
+								<li>{{ $citizen->last_name}}, {{ $citizen->first_name }}</li>
+							@endforeach
+							**!!LIMIT TO 10!!**
+							--}}
 							<li>ALBAR, ROMEO PEÑONES</li>
 							<li>ALFONSO, IVY ELLEN LEYVA</li>
 							<li>ALMONIA, JONATHAN DE LUMEN</li>

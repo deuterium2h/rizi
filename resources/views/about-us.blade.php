@@ -28,7 +28,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					</div>
 					<div class="col-sm-5">
 						<a>
-							<img src="images/about-img-1.png" class="img-rounded" />
+							<img src="/images/about-img-1.png" class="img-rounded" />
 						</a>
 					</div>
 				</div><br>
@@ -40,7 +40,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 				<div class="row">
 					<div class="col-sm-5">
 						<a>
-							<img src="images/about-img-1.png" class="img-rounded" />
+							<img src="/images/about-img-1.png" class="img-rounded" />
 						</a>
 					</div>
 					<div class="col-sm-7">
@@ -79,7 +79,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					</div>
 					<div class="col-sm-5">
 						<a>
-							<img src="images/about-img-1.png" class="img-rounded" />
+							<img src="/images/about-img-1.png" class="img-rounded" />
 						</a>
 					</div>
 				</div>
@@ -122,7 +122,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/cap-salen.jpg" class="img-circle" />
+								<img src="/images/officials/cap-salen.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Jonathan C. Salen</a>
@@ -133,7 +133,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-say.jpg" class="img-circle" />
+								<img src="/images/officials/kag-say.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. John Robin G. Say</a>
@@ -144,7 +144,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-marquez.jpg" class="img-circle" />
+								<img src="/images/officials/kag-marquez.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Maurine D. Marquez</a>
@@ -155,7 +155,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-olayvar.jpg" class="img-circle" />
+								<img src="/images/officials/kag-olayvar.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Mario C. Olayvar</a>
@@ -168,7 +168,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-gatlabayan.jpg" class="img-circle" />
+								<img src="/images/officials/kag-gatlabayan.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Crisanta M. Gatlabayan</a>
@@ -179,7 +179,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-bautista.jpg" class="img-circle" />
+								<img src="/images/officials/kag-bautista.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Leonidez Vincent Bautista</a>
@@ -190,7 +190,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-fajardo.jpg" class="img-circle" />
+								<img src="/images/officials/kag-fajardo.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Abner S. Fajardo</a>
@@ -201,7 +201,7 @@ on June 22, 1963,  provided  recognition  to  Barangay San  Isidro,  as  a   ful
 					<div class="col-sm-3">
 						<div class="staff-member">
 							<a class="image">
-								<img src="images/officials/kag-elizaga.jpg" class="img-circle" />
+								<img src="/images/officials/kag-elizaga.jpg" class="img-circle" />
 							</a>
 							<h4>
 								<a>Hon. Dionisio A. Elizaga</a>

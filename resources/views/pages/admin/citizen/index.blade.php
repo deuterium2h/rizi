@@ -29,7 +29,7 @@
 						<i class="entypo-pencil"></i>
 					</a>
 
-					<img src="images/citizens/{{ $citizen->avatar}}" alt="" style="border-radius: 6%; border: 3px solid #333; width: 175px; height: 175px;">
+					<img src="/images/citizens/{{ $citizen->avatar}}" alt="" style="border-radius: 6%; border: 3px solid #333; width: 175px; height: 175px;">
 				</citizen>
 			@endforeach
 		@else

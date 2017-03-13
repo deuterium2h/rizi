@@ -34,7 +34,7 @@
 				<div id="gender" name="gender">{{ $citizen->gender }}</div>
 			</div>
 			<div class="col-md-2 pull-right" style="float: left;">
-				<img src="/images/citizen/{{ $citizen->avatar }}" 
+				<img src="/images/citizens/{{ $citizen->avatar }}" 
 					 alt="{{ $citizen->last_name }}, {{ $citizen->first_name }} {{ $citizen->middle_name }}" 
 					 class="pull-right" 
 					 style="width:110px; height:110px; border: 4px solid #c1c1c1;">
