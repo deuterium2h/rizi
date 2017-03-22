@@ -11,13 +11,15 @@ elixir(mix => {
 		'libs/neon-slider.js',
 		'libs/lity.js',
 		'libs/bootstrap-inputmask.min.js',
-		'libs/neon-custom-user.js'
+		'libs/neon-custom-user.js',
+		'libs/sweetalert-dev.js'
 	], './public/js/user.js')
 		.styles([
 		'libs/bootstrap.css',
 		'libs/font-icons/entypo/css/entypo.css',
 		'libs/lity.css',
-		'libs/neon-welcome.css'
+		'libs/neon-welcome.css',
+		'libs/sweetalert.css'
 	], './public/css/user.css')
 });
 
@@ -36,7 +38,8 @@ elixir(mix => {
 		// 'libs/jcrop/jquery.Jcrop.min.js',
 		'libs/neon-custom.js',
 		'libs/dropzone.js',
-		'libs/lity.js'
+		'libs/lity.js',
+		'libs/sweetalert-dev.js'
 	], './public/js/libs.js')
 		.styles([
 		'../js/libs/jquery-ui/css/no-theme/jquery-ui-1.10.3.custom.min.css',
@@ -47,6 +50,7 @@ elixir(mix => {
 		'libs/neon-theme.css',
 		'libs/custom.css',
 		'libs/lity.css',
-		'libs/dropzone.css'
+		'libs/dropzone.css',
+		'sweetalert.css'
 	], './public/css/libs.css')
 });

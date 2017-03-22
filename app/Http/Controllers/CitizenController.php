@@ -149,6 +149,8 @@ class CitizenController extends Controller
 			$citizen->is_valid = 1;
 			$citizen->update($request->all());
 
+			//flash('Citizen Updated', 'Citizen\'s Information has been Updated.');
+
 			return redirect('citizen');
 		}
 	}
