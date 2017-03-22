@@ -35,6 +35,8 @@ class ApplicantController extends Controller
 
 			$tid = $citizen->id;
 
+			flash('Citizen Registered', 'Citizen\'s Information has been Registered.');
+
 			return view('pages.end-user.pending', compact('tid'));
 		}
 	}
@@ -78,6 +80,8 @@ class ApplicantController extends Controller
 			$permit->save();
 
 			$tid = $permit->id;
+
+			flash('Permit Registered', 'Permit\'s Information has been Registered.');
 
 			return view('pages.end-user.pending', compact('tid'));
 		}

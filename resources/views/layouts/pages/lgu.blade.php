@@ -28,5 +28,6 @@
 	</body>
 	{{-- Scripts --}}
 	<script src="/js/user.js"></script>
+	@include('layouts.partials._flash')
 	@yield('custom-js')
 </html>

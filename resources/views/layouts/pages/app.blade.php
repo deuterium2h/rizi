@@ -13,7 +13,6 @@
 		{{-- Styles --}}
 		<link href="/css/libs.css" rel="stylesheet">
 		<link rel="icon" href="/favicon.png" type="image/x-icon">
-
 		{{-- Script for CSRF Token --}}
 		<script>
 			window.Risi = <?php echo json_encode([
@@ -43,6 +42,7 @@
 		{{-- Scripts --}}
 		<script src="/js/app.js"></script>
 		<script src="/js/libs.js"></script>
+		@include('layouts.partials._flash')
 	@yield('custom-js')
 	</body>
 </html>

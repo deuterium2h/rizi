@@ -80,6 +80,8 @@ class CitizenController extends Controller
 			
 			$citizen->save();
 
+			flash('Citizen Added', 'Citizen\'s Information has been Added.');
+			
 			return redirect('citizen');
 		}
 	}
@@ -149,7 +151,7 @@ class CitizenController extends Controller
 			$citizen->is_valid = 1;
 			$citizen->update($request->all());
 
-			//flash('Citizen Updated', 'Citizen\'s Information has been Updated.');
+			flash('Citizen Updated', 'Citizen\'s Information has been Updated.');
 
 			return redirect('citizen');
 		}
