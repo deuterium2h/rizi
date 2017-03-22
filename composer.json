@@ -26,7 +26,8 @@
             "database"
         ],
         "files": [
-            "app/utilities/Curl.php"
+            "app/utilities/Curl.php",
+            "app/helpers.php"
         ],
         "psr-4": {
             "App\\": "app/"
