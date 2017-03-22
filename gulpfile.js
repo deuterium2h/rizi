@@ -51,6 +51,6 @@ elixir(mix => {
 		'libs/custom.css',
 		'libs/lity.css',
 		'libs/dropzone.css',
-		'sweetalert.css'
+		'libs/sweetalert.css'
 	], './public/css/libs.css')
 });
